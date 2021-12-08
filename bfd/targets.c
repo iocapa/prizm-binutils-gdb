@@ -170,7 +170,8 @@ DESCRIPTION
 .  bfd_target_mach_o_flavour,
 .  bfd_target_pef_flavour,
 .  bfd_target_pef_xlib_flavour,
-.  bfd_target_sym_flavour
+.  bfd_target_sym_flavour,
+.  bfd_target_g3a_flavour,
 .};
 .
 .enum bfd_endian { BFD_ENDIAN_BIG, BFD_ENDIAN_LITTLE, BFD_ENDIAN_UNKNOWN };
@@ -882,6 +883,7 @@ extern const bfd_target sh_elf32_nbsd_vec;
 extern const bfd_target sh_elf32_nbsd_le_vec;
 extern const bfd_target sh_elf32_vxworks_vec;
 extern const bfd_target sh_elf32_vxworks_le_vec;
+extern const bfd_target sh_g3a_prizm_vec;
 extern const bfd_target sh_pe_le_vec;
 extern const bfd_target sh_pei_le_vec;
 extern const bfd_target sparc_elf32_vec;
@@ -1287,6 +1289,7 @@ static const bfd_target * const _bfd_target_vector[] =
 	&sh_elf32_nbsd_le_vec,
 	&sh_elf32_vxworks_vec,
 	&sh_elf32_vxworks_le_vec,
+	&sh_g3a_prizm_vec,
 	&sh_pe_le_vec,
 	&sh_pei_le_vec,
 
@@ -1807,6 +1810,7 @@ bfd_flavour_name (enum bfd_flavour flavour)
     case bfd_target_pef_flavour: return "PEF";
     case bfd_target_pef_xlib_flavour: return "PEF_XLIB";
     case bfd_target_sym_flavour: return "SYM";
+	case bfd_target_g3a_flavour: return "g3a";
     /* There is no "default" case here so that -Wswitch (part of -Wall)
        catches missing entries.  */
     }

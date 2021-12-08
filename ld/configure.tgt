@@ -860,6 +860,8 @@ sh-*-nto*)		targ_emul=shelf_nto
 sh-*-pe)		targ_emul=shpe ;
 			targ_extra_ofiles="deffilep.o pe-dll.o"
 			;;
+sh*-*-prizm*)		targ_emul=shelf_prizm
+			;;
 sh-*-*)			targ_emul=sh;
 			targ_extra_emuls=shl
 			targ_extra_ofiles=

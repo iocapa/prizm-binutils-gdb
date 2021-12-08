@@ -1304,6 +1304,11 @@ case "${targ}" in
     targ_selvecs="sh_pe_le_vec sh_pei_le_vec"
     targ_underscore=yes
     ;;
+  sh*-*-prizm*)
+    targ_defvec=sh_elf32_vec
+    targ_selvecs="sh_g3a_prizm_vec"
+    targ_underscore=yes
+    ;;
   sh-*-vxworks)
     targ_defvec=sh_elf32_vxworks_vec
     targ_selvecs="sh_elf32_vxworks_le_vec"
